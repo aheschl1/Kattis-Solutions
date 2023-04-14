@@ -12,7 +12,7 @@ typedef unsigned long long ull;
 
 using namespace std;
 
-void solve(){
+void solve(){ 
     string first, second;
     cin >> first >> second;
     cout << (first.size() >= second.size() ? "go" : "no") << endl;
