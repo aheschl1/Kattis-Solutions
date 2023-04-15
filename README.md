@@ -1,2 +1,2 @@
 # Kattis-Solutions
-These are most of my katiss solutions. Not ranked by difficulty.
+These are most of my katiss solutions.
