@@ -1,2 +1,2 @@
 # Kattis-Solutions
-These are most of my katiss solutions.
+These are most of my katis solutions.
