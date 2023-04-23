@@ -23,11 +23,15 @@ void solve(){
     int n = lives + wins_required - 1;
 
     vvd table(n+1, vector<double>(wins_required+1, 0));
+    double ans = 0;
     for(int g = 0; g < n; g++){
         double p; cin >> p;
         if(g==0){
             table[0][0] = 1-p;
             table[0][1] = p;
+            if(wins_required==1){
+                ans+=p;
+            }
             continue;
         }
         for(int w_b = 0; w_b < wins_required; w_b ++){
@@ -35,12 +39,11 @@ void solve(){
                 double p_b = table[g-1][w_b];
                 table[g][w_b] += p_b*(1-p);
                 table[g][w_b+1] += p_b*(p);
+                if(w_b+1 == wins_required){
+                    ans+=p_b*(p);
+                }
             }
         }
-    }
-    double ans = 0;
-    for(int r = 0; r < n+1; r++){
-        ans+=table[r][wins_required];
     }
     cout << ans << endl;
 }
