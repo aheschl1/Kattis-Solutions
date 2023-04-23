@@ -19,9 +19,9 @@ using namespace std;
     long long x=1, y=a; 
     while (b > 0) {
         if (b%2 == 1) {
-            x = (x*y) % 1000000007; // multiplying with base
+            x = (x*y) % 1000000007;
         }
-        y = (y*y) % 1000000007; // squaring the base
+        y = (y*y) % 1000000007;
         b /= 2;
     }
     return x % 1000000007;
