@@ -19,14 +19,13 @@ using namespace std;
 void solve(){
     int d, u; cin >> d >> u;
     priority_queue<int, std::vector<int>, std::greater<int>> names;
-    //           day   available on day
-    unordered_map<int, int> reserved;
+    int reserved[4*100001];
     int day = 1;
     while(u--){
         names.push(day);
-        if(reserved.find(day)!=reserved.end()){
+        if(reserved[day] != 0){
             names.push(reserved[day]);
-            reserved.erase(reserved.find(day));
+            reserved[day] = 0;
         }
         char command; cin >> command;
         if(command == 'a'){
