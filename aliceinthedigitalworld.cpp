@@ -33,7 +33,6 @@ void solve(){
         }
     }
     pois.push_back({content.size(), 'e'});
-    content.push_back(-1);
 
     int ans = 0;
 
