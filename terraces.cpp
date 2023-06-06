@@ -79,6 +79,7 @@ void calculate(vvpi &field, int r, int c){
 }
 
 void solve(){
+    //Mark bad things not good things.... smh
     int columns, rows; cin >> columns >> rows;
     vvpi field;
     for(int _r = 0; _r < rows; _r++){
